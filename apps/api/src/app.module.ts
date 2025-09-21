@@ -1,9 +1,8 @@
 import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
+import { ConfigModule } from '@nestjs/config';
 import { AuthModule } from './auth/auth.module';
 import { TaskModule } from './task/task.module';
-import { AuditLogModule } from './audit-log/audit-log.module';
-import { ConfigModule } from '@nestjs/config';
 import { User } from './entities/user.entity';
 import { Organization } from './entities/organization.entity';
 import { Role } from './entities/role.entity';
@@ -22,7 +21,6 @@ import { AuditLog } from './entities/audit-log.entity';
     }),
     AuthModule,
     TaskModule,
-    AuditLogModule,
   ],
 })
 export class AppModule {}
